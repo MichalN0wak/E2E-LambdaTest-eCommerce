@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, chromium } from "@playwright/test";
 import { loginData } from "../test-data/login.data";
 import { LoginPage } from "../Pages/login.page";
 import { NavBarComponent } from "../Components/nav-bar.component";
@@ -24,5 +24,31 @@ test.describe("Login tests", () => {
 
     // Assert
     await expect(page).toHaveURL(loginPage.expectedUrl);
+  });
+
+  test("display_message_when_password_is_wrong", async ({ page }) => {
+    // Arrange
+    const loginPage = new LoginPage(page);
+
+    // Act
+    await loginPage.login(loginData.userEmail, "");
+
+    // Assert
+    await expect(loginPage.errorMessageBar).toHaveText(
+      " Warning: No match for E-Mail Address and/or Password."
+    );
+  });
+
+  test("display_message_when_exeeded_login_attempts", async ({ page }) => {
+    // Arrange
+    const loginPage = new LoginPage(page);
+
+    // Act
+    await loginPage.exeedLoginAttempts(loginData.userEmailExeed, 6);
+
+    // Assert
+    await expect(loginPage.errorMessageBar).toHaveText(
+      "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour."
+    );
   });
 });

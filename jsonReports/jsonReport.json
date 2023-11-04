@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -50,19 +50,6 @@
           "tests/login.spec.ts"
         ],
         "timeout": 30000
-      },
-      {
-        "outputDir": "C:/Proj/Testy/LambdaTest eCommerce/test-results",
-        "repeatEach": 1,
-        "retries": 1,
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "C:/Proj/Testy/LambdaTest eCommerce",
-        "testIgnore": [],
-        "testMatch": [
-          "tests/login.spec.ts"
-        ],
-        "timeout": 30000
       }
     ],
     "shard": null,
@@ -86,7 +73,7 @@
           "column": 6,
           "specs": [
             {
-              "title": "succesfull login with correct credentials",
+              "title": "login_when_credentials_are_correct",
               "ok": true,
               "tags": [],
               "tests": [
@@ -100,44 +87,17 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 10451,
+                      "duration": 7570,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-04T12:11:02.113Z",
+                      "startTime": "2023-11-04T13:53:34.905Z",
                       "attachments": [
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-succesfull-login-with-correct-credentials-chromium\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                },
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "status": "passed",
-                      "duration": 13964,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-11-04T12:11:02.078Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-succesfull-login-with-correct-credentials-firefox\\video.webm"
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-login-when-credentials-are-correct-chromium\\video.webm"
                         }
                       ]
                     }
@@ -145,9 +105,85 @@
                   "status": "expected"
                 }
               ],
-              "id": "6b6dc33e290e5a0a43b1-7968dd39482f808ae5d7",
+              "id": "6b6dc33e290e5a0a43b1-50e1c5c3695d0a47555b",
               "file": "tests/login.spec.ts",
               "line": 18,
+              "column": 7
+            },
+            {
+              "title": "display_message_when_password_is_wrong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 6697,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-04T13:53:43.378Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-password-is-wrong-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b6dc33e290e5a0a43b1-1eab824ef0235c1301ad",
+              "file": "tests/login.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "display_message_when_exeeded_login_attempts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 8607,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-04T13:53:50.077Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-exeeded-login-attempts-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b6dc33e290e5a0a43b1-086f464bec9ca23ef2f1",
+              "file": "tests/login.spec.ts",
+              "line": 42,
               "column": 7
             }
           ]
@@ -157,7 +193,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-04T12:11:01.224Z",
-    "duration": 19303.268
+    "startTime": "2023-11-04T13:53:34.104Z",
+    "duration": 24911.834
   }
 }
