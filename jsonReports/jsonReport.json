@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Proj\\Testy\\LambdaTest eCommerce\\playwright.config.ts",
-    "rootDir": "C:/Proj/Testy/LambdaTest eCommerce",
+    "configFile": "c:\\Proj\\Testy\\LambdaTest eCommerce\\playwright.config.ts",
+    "rootDir": "c:/Proj/Testy/LambdaTest eCommerce",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -39,15 +39,15 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Proj/Testy/LambdaTest eCommerce/test-results",
+        "outputDir": "c:/Proj/Testy/LambdaTest eCommerce/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Proj/Testy/LambdaTest eCommerce",
+        "testDir": "c:/Proj/Testy/LambdaTest eCommerce",
         "testIgnore": [],
         "testMatch": [
-          "tests/login.spec.ts"
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
         "timeout": 30000
       }
@@ -55,7 +55,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.39.0",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
@@ -87,19 +87,13 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 7570,
+                      "duration": 5927,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-04T13:53:34.905Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-login-when-credentials-are-correct-chromium\\video.webm"
-                        }
-                      ]
+                      "startTime": "2023-11-12T07:47:04.719Z",
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
@@ -125,19 +119,13 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6697,
+                      "duration": 4691,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-04T13:53:43.378Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-password-is-wrong-chromium\\video.webm"
-                        }
-                      ]
+                      "startTime": "2023-11-12T07:47:11.735Z",
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
@@ -163,19 +151,13 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8607,
+                      "duration": 6874,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-04T13:53:50.077Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-exeeded-login-attempts-chromium\\video.webm"
-                        }
-                      ]
+                      "startTime": "2023-11-12T07:47:16.430Z",
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
@@ -189,11 +171,60 @@
           ]
         }
       ]
+    },
+    {
+      "title": "tests\\purchase.spec.ts",
+      "file": "tests/purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product search",
+          "file": "tests/purchase.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "add_first_top_product_to_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 9347,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-12T07:47:23.316Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "acc323e999007e5937cd-8e7b547ee09b80af7746",
+              "file": "tests/purchase.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-04T13:53:34.104Z",
-    "duration": 24911.834
+    "startTime": "2023-11-12T07:47:03.896Z",
+    "duration": 28811.778000000002
   }
 }

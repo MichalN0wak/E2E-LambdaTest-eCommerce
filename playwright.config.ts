@@ -78,7 +78,7 @@ import { PlaywrightTestConfig, defineConfig, devices } from "@playwright/test";
 // });
 
 const config: PlaywrightTestConfig = {
-  testMatch: ["tests/login.spec.ts"],
+  // testMatch: ["tests/purchase.spec.ts"],
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/",
     headless: true,

@@ -35,7 +35,7 @@ test.describe("Login tests", () => {
 
     // Assert
     await expect(loginPage.errorMessageBar).toHaveText(
-      " Warning: No match for E-Mail Address and/or Password."
+      "Warning: No match for E-Mail Address and/or Password."
     );
   });
 
