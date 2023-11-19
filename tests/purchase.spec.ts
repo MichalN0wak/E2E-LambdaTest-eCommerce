@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, Locator } from "@playwright/test";
 import { NavBarComponent } from "../Components/nav-bar.component";
 import { LoginPage } from "../Pages/login.page";
 import { loginData } from "../test-data/login.data";
@@ -26,12 +26,31 @@ test.describe("Product search and add to cart tests", () => {
 
   test("add_first_top_product_to_cart", async ({ page }) => {
     // Arrange
-    const buyedProduct = purchaseComponent.firstTopProduct;
+    const buyedProduct = purchaseComponent.topProduct1;
     const buyedProductName = purchaseComponent.topProductsNames[0];
     // Act
     await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();
     await buyedProduct.hover();
-    await purchaseComponent.addToCartButton.click();
+    await purchaseComponent.clickAddToCartButton(
+      purchaseComponent.topProductsAddToCartButtons[0]
+    );
+
+    // Assert
+    await expect(purchaseComponent.toastMessage).toHaveText(
+      `Success: You have added ${buyedProductName} to your shopping cart!`
+    );
+  });
+
+  test("add_selected_top_product_to_cart", async ({ page }) => {
+    // Arrange
+    const buyedProduct = purchaseComponent.topProducts[6];
+    const buyedProductName = purchaseComponent.topProductsNames[1];
+    // Act
+    await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();
+    await buyedProduct.hover();
+    await purchaseComponent.clickAddToCartButton(
+      purchaseComponent.topProductsAddToCartButtons[6]
+    );
 
     // Assert
     await expect(purchaseComponent.toastMessage).toHaveText(

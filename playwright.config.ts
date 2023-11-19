@@ -86,7 +86,7 @@ const config: PlaywrightTestConfig = {
     video: "on",
     trace: "retain-on-failure",
   },
-  retries: 1,
+  // retries: 1,
   reporter: [
     ["dot"],
     [

@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Proj\\Testy\\LambdaTest eCommerce\\playwright.config.ts",
-    "rootDir": "c:/Proj/Testy/LambdaTest eCommerce",
+    "configFile": "C:\\Proj\\Testy\\LambdaTest eCommerce\\playwright.config.ts",
+    "rootDir": "C:/Proj/Testy/LambdaTest eCommerce",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,12 +39,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Proj/Testy/LambdaTest eCommerce/test-results",
+        "outputDir": "C:/Proj/Testy/LambdaTest eCommerce/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Proj/Testy/LambdaTest eCommerce",
+        "testDir": "C:/Proj/Testy/LambdaTest eCommerce",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -55,7 +55,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.39.0",
-    "workers": 1,
+    "workers": 2,
     "webServer": null
   },
   "suites": [
@@ -87,13 +87,19 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 5927,
+                      "duration": 10292,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-12T07:47:04.719Z",
-                      "attachments": []
+                      "startTime": "2023-11-19T08:22:12.534Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-login-when-credentials-are-correct-chromium\\video.webm"
+                        }
+                      ]
                     }
                   ],
                   "status": "expected"
@@ -119,13 +125,19 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 4691,
+                      "duration": 7046,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-12T07:47:11.735Z",
-                      "attachments": []
+                      "startTime": "2023-11-19T08:22:24.373Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-password-is-wrong-chromium\\video.webm"
+                        }
+                      ]
                     }
                   ],
                   "status": "expected"
@@ -151,13 +163,19 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6874,
+                      "duration": 10290,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-12T07:47:16.430Z",
-                      "attachments": []
+                      "startTime": "2023-11-19T08:22:31.421Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-exeeded-login-attempts-chromium\\video.webm"
+                        }
+                      ]
                     }
                   ],
                   "status": "expected"
@@ -180,7 +198,7 @@
       "specs": [],
       "suites": [
         {
-          "title": "Product search",
+          "title": "Product search and add to cart tests",
           "file": "tests/purchase.spec.ts",
           "line": 8,
           "column": 6,
@@ -198,23 +216,67 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 9347,
+                      "duration": 15764,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-11-12T07:47:23.316Z",
-                      "attachments": []
+                      "startTime": "2023-11-19T08:22:12.586Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-purchase-Product-search-and-add-to-cart-tests-add-first-top-product-to-cart-chromium\\video.webm"
+                        }
+                      ]
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "acc323e999007e5937cd-8e7b547ee09b80af7746",
+              "id": "acc323e999007e5937cd-6eccc09d83f2881be950",
               "file": "tests/purchase.spec.ts",
               "line": 27,
+              "column": 7
+            },
+            {
+              "title": "add_selected_top_product_to_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 12117,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-11-19T08:22:29.647Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-purchase-Product-search-and-add-to-cart-tests-add-selected-top-product-to-cart-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "acc323e999007e5937cd-0bb50803d78278f51cfa",
+              "file": "tests/purchase.spec.ts",
+              "line": 44,
               "column": 7
             }
           ]
@@ -224,7 +286,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-11-12T07:47:03.896Z",
-    "duration": 28811.778000000002
+    "startTime": "2023-11-19T08:22:11.542Z",
+    "duration": 30419.765
   }
 }
