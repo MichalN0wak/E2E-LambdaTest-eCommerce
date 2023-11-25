@@ -57,4 +57,38 @@ test.describe("Product search and add to cart tests", () => {
       `Success: You have added ${buyedProductName} to your shopping cart!`
     );
   });
+
+  test("add_random_top_product_to_cart", async ({ page }) => {
+    // Arrange
+    let buyedProduct: Locator;
+    let randomProductIndex: number =
+      await purchaseComponent.selectRandomTopProduct();
+    buyedProduct = purchaseComponent.topProducts[randomProductIndex];
+    let buyedProductName =
+      purchaseComponent.topProductsNames[randomProductIndex];
+
+    // Act
+    await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();
+    await buyedProduct.hover();
+    await purchaseComponent.clickAddToCartButton(
+      purchaseComponent.topProductsAddToCartButtons[randomProductIndex]
+    );
+
+    // Assert
+    if (randomProductIndex >= 0 && randomProductIndex < 4) {
+      await expect(purchaseComponent.toastMessage).toHaveText(
+        `Success: You have added ${purchaseComponent.topProductsNames[0]} to your shopping cart!`
+      );
+    } else if (randomProductIndex >= 4 && randomProductIndex < 8) {
+      await expect(purchaseComponent.toastMessage).toHaveText(
+        `Success: You have added ${purchaseComponent.topProductsNames[1]} to your shopping cart!`
+      );
+    } else if (randomProductIndex >= 8 && randomProductIndex < 10) {
+      await expect(purchaseComponent.toastMessage).toHaveText(
+        `Success: You have added ${purchaseComponent.topProductsNames[2]} to your shopping cart!`
+      );
+    } else {
+      console.log("out of index");
+    }
+  });
 });

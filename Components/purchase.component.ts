@@ -11,9 +11,6 @@ export class PurchaseComponent {
   topProducts: ReturnType<Page["locator"]>[] = [];
   topProduct1 = this.page.locator("#mz-product-listing-image-37213259-0-0");
   topProduct2 = this.page.locator("#mz-product-listing-image-37213259-0-1");
-  // topProduct10 = this.page.locator("mz-product-listing-image-37213259-0-9");
-  addToCartButtonTopProduct1: Locator;
-  addToCartButtonTopProduct2: Locator;
   topProductsAddToCartButtonsSelectors: string[] = Array.from(
     { length: 10 },
     (_, i) => `.cart-${107 - i}[title="Add to Cart"]`
@@ -36,5 +33,18 @@ export class PurchaseComponent {
 
   async clickAddToCartButton(addToCartButtonLocator: Locator): Promise<void> {
     await this.topProductsSection.locator(addToCartButtonLocator).click();
+  }
+
+  async selectRandomTopProduct(): Promise<number> {
+    const topProduct1 = 0;
+    const topProduct10 = 9;
+    let randomIndex = Math.floor(Math.random() * this.topProducts.length);
+    return randomIndex;
+  }
+
+  async clickAddToCartButtonOfRandomProduct(
+    randomProduct: Locator
+  ): Promise<void> {
+    await this.topProductsSection.locator(randomProduct).click();
   }
 }
