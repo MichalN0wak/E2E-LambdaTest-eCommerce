@@ -46,14 +46,14 @@ test.describe("empyting cart tests", () => {
     await purchaseComponent.clickAddToCartButton(
       purchaseComponent.topProductsAddToCartButtons[0]
     );
+    await homePageComponent.viewCartButton.click();
   });
 
-  test.only("remove_item_from_cart", async ({ page }) => {
+  test("remove_item_from_cart", async ({ page }) => {
     //Arrange
     const removeFromCartButton = cartComponent.removeFromCartButton;
 
     //Act
-    await homePageComponent.viewCartButton.click();
     if (removeFromCartButton) {
       await removeFromCartButton.click();
     }
@@ -61,6 +61,20 @@ test.describe("empyting cart tests", () => {
     //Assert
     await expect(cartComponent.emptyCartContent).toContainText(
       cartComponent.emptyCartExpectedMessage
+    );
+  });
+
+  test.only("change_item_quantity", async ({ page }) => {
+    //Arrange
+    const quantityInput = page.locator(".form-control");
+
+    //Act
+    await quantityInput.first().fill("3");
+    await quantityInput.first().press("Enter");
+
+    //Assert
+    await expect(cartComponent.cartModificationSuccessAlert).toContainText(
+      "Success: You have modified your shopping cart!"
     );
   });
 });
