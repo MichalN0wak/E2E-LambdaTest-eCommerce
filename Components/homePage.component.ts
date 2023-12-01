@@ -3,6 +3,8 @@ import { Page } from "@playwright/test";
 export class HomePageComponent {
   homeLogo = this.page.locator("#entry_217821");
   topProductsSection = this.page.locator("#entry_213257");
+  cartButton = this.page.locator("#entry_217825");
+  editCartButton = this.page.locator("#entry_217850");
 
   constructor(private page: Page) {}
 }
