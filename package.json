@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:login": "npx playwright test tests/login.spec.ts",
+    "test:login:headed": "npx playwright test tests/login.spec.ts -- --headed",
+    "test:addtocart": "npx playwright test tests/addToCart.spec.ts",
+    "test:addtocart:headed": "npx playwright test tests/addToCart.spec.ts -- --headed",
+    "test:cart": "npx playwright test tests/cart.spec.ts",
+    "test:cart:headed": "npx playwright test tests/cart.spec.ts -- --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

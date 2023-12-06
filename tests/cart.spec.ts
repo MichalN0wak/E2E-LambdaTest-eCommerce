@@ -16,6 +16,15 @@ test.describe("cart editing tests", () => {
     await page.goto("/");
   });
 
+  test.afterEach("Status check", async ({ page }, testInfo) => {
+    console.log(
+      `Finished ${testInfo.title} test with status ${testInfo.status}`
+    );
+
+    if (testInfo.status !== testInfo.expectedStatus)
+      console.log(`Failed ${testInfo.title} test`);
+  });
+
   test("open_cart", async ({ page }) => {
     //Arrange
     const cartButton = homePageComponent.cartButton;

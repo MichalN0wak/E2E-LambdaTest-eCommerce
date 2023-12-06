@@ -24,9 +24,11 @@ test.describe("Product search and add to cart tests", () => {
     await homePageComponent.homeLogo.click();
   });
 
-  test.afterEach('Status check', async ({ page }, testInfo) => {
-    console.log(`Finished ${testInfo.title} test with status ${testInfo.status}`);
-  
+  test.afterEach("Status check", async ({ page }, testInfo) => {
+    console.log(
+      `Finished ${testInfo.title} test with status ${testInfo.status}`
+    );
+
     if (testInfo.status !== testInfo.expectedStatus)
       console.log(`Failed ${testInfo.title} test`);
   });
@@ -71,8 +73,6 @@ test.describe("Product search and add to cart tests", () => {
     let randomProductIndex: number =
       await purchaseComponent.selectRandomTopProduct();
     buyedProduct = purchaseComponent.topProducts[randomProductIndex];
-    let buyedProductName =
-      purchaseComponent.topProductsNames[randomProductIndex];
 
     // Act
     await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();
