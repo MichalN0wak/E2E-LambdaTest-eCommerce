@@ -24,9 +24,16 @@ test.describe("Product search and add to cart tests", () => {
     await homePageComponent.homeLogo.click();
   });
 
+  test.afterEach('Status check', async ({ page }, testInfo) => {
+    console.log(`Finished ${testInfo.title} test with status ${testInfo.status}`);
+  
+    if (testInfo.status !== testInfo.expectedStatus)
+      console.log(`Failed ${testInfo.title} test`);
+  });
+
   test("add_first_top_product_to_cart", async ({ page }) => {
     // Arrange
-    const buyedProduct = purchaseComponent.topProduct1;
+    const buyedProduct = purchaseComponent.topProducts[0];
     const buyedProductName = purchaseComponent.topProductsNames[0];
     // Act
     await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();

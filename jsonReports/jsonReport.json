@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -60,20 +60,20 @@
   },
   "suites": [
     {
-      "title": "tests\\cart.spec.ts",
-      "file": "tests/cart.spec.ts",
+      "title": "tests\\addToCart.spec.ts",
+      "file": "tests/addToCart.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "empyting cart tests",
-          "file": "tests/cart.spec.ts",
-          "line": 32,
+          "title": "Product search and add to cart tests",
+          "file": "tests/addToCart.spec.ts",
+          "line": 8,
           "column": 6,
           "specs": [
             {
-              "title": "remove_item_from_cart",
+              "title": "add_first_top_product_to_cart",
               "ok": true,
               "tags": [],
               "tests": [
@@ -87,17 +87,21 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 9082,
+                      "duration": 15714,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Finished add_first_top_product_to_cart test with status passed\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-01T17:34:57.562Z",
+                      "startTime": "2023-12-06T05:48:46.769Z",
                       "attachments": [
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-cart-empyting-cart-tests-remove-item-from-cart-chromium\\video.webm"
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-addToCart-Product-search-and-add-to-cart-tests-add-first-top-product-to-cart-chromium\\video.webm"
                         }
                       ]
                     }
@@ -105,10 +109,380 @@
                   "status": "expected"
                 }
               ],
-              "id": "e04cdee13064fc202b2f-c375db6c165d84824dab",
-              "file": "tests/cart.spec.ts",
+              "id": "5e1d57747c7268c2cd1d-b26c092f2d7b38511114",
+              "file": "tests/addToCart.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "add_selected_top_product_to_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 16457,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished add_selected_top_product_to_cart test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:03.816Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-addToCart-Product-search-and-add-to-cart-tests-add-selected-top-product-to-cart-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e1d57747c7268c2cd1d-4622e7235d41b28cc297",
+              "file": "tests/addToCart.spec.ts",
               "line": 51,
-              "column": 8
+              "column": 7
+            },
+            {
+              "title": "add_random_top_product_to_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 12309,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished add_random_top_product_to_cart test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:20.275Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-addToCart-Product-search-and-add-to-cart-tests-add-random-top-product-to-cart-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5e1d57747c7268c2cd1d-5b41e4df588654286123",
+              "file": "tests/addToCart.spec.ts",
+              "line": 68,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\cart.spec.ts",
+      "file": "tests/cart.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "cart editing tests",
+          "file": "tests/cart.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "open_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 7369,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:48:46.742Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-cart-cart-editing-tests-open-cart-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e04cdee13064fc202b2f-b54326ef127fe0b08438",
+              "file": "tests/cart.spec.ts",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "change_item_quantity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 9279,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:48:55.530Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-cart-cart-editing-tests-change-item-quantity-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e04cdee13064fc202b2f-69c391492eefbe8765da",
+              "file": "tests/cart.spec.ts",
+              "line": 34,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "empyting cart tests",
+          "file": "tests/cart.spec.ts",
+          "line": 56,
+          "column": 6,
+          "specs": [
+            {
+              "title": "remove_all_items_from_cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 14072,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished remove_all_items_from_cart test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:04.812Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-cart-empyting-cart-tests-remove-all-items-from-cart-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e04cdee13064fc202b2f-71400c27c5555a1bcb45",
+              "file": "tests/cart.spec.ts",
+              "line": 91,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tests\\login.spec.ts",
+      "file": "tests/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login tests",
+          "file": "tests/login.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login_when_credentials_are_correct",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 8273,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished login_when_credentials_are_correct test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:18.928Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-login-when-credentials-are-correct-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b6dc33e290e5a0a43b1-50e1c5c3695d0a47555b",
+              "file": "tests/login.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "display_message_when_password_is_wrong",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 6517,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished display_message_when_password_is_wrong test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:27.203Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-password-is-wrong-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b6dc33e290e5a0a43b1-1eab824ef0235c1301ad",
+              "file": "tests/login.spec.ts",
+              "line": 36,
+              "column": 7
+            },
+            {
+              "title": "display_message_when_exeeded_login_attempts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 8537,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Finished display_message_when_exeeded_login_attempts test with status passed\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-12-06T05:49:33.722Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-login-Login-tests-display-message-when-exeeded-login-attempts-chromium\\video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b6dc33e290e5a0a43b1-086f464bec9ca23ef2f1",
+              "file": "tests/login.spec.ts",
+              "line": 49,
+              "column": 7
             }
           ]
         }
@@ -117,7 +491,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-12-01T17:34:56.650Z",
-    "duration": 11620.302
+    "startTime": "2023-12-06T05:48:45.882Z",
+    "duration": 56529.53
   }
 }

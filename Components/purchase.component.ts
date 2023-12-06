@@ -36,8 +36,6 @@ export class PurchaseComponent {
   }
 
   async selectRandomTopProduct(): Promise<number> {
-    const topProduct1 = 0;
-    const topProduct10 = 9;
     let randomIndex = Math.floor(Math.random() * this.topProducts.length);
     return randomIndex;
   }
@@ -46,5 +44,10 @@ export class PurchaseComponent {
     randomProduct: Locator
   ): Promise<void> {
     await this.topProductsSection.locator(randomProduct).click();
+  };
+
+  async amountOfProductsToAddToCart(): Promise<number> {
+    let productsAmount = Math.floor(Math.random() * this.topProducts.length);
+    return productsAmount;
   }
 }

@@ -1,4 +1,4 @@
-import { test, expect, Locator } from "@playwright/test";
+import { test, expect } from "@playwright/test";
 import { HomePageComponent } from "../Components/homePage.component";
 import { PurchaseComponent } from "../Components/purchase.component";
 import { CartComponent } from "../Components/cart.components";
@@ -33,7 +33,7 @@ test.describe("cart editing tests", () => {
 
   test("change_item_quantity", async ({ page }) => {
     //Arrange
-    const buyedProduct = purchaseComponent.topProduct1;
+    const buyedProduct = purchaseComponent.topProducts[0];
     const quantityInput = page.locator(".form-control");
 
     //Act
@@ -62,29 +62,46 @@ test.describe("empyting cart tests", () => {
     homePageComponent = new HomePageComponent(page);
     purchaseComponent = new PurchaseComponent(page, homePageComponent);
     cartComponent = new CartComponent(page);
-    const buyedProduct = purchaseComponent.topProduct1;
+    const buyedProducts = [
+      purchaseComponent.topProducts[0],
+      purchaseComponent.topProducts[1],
+      purchaseComponent.topProducts[2],
+    ];
 
     await page.goto("/");
     await homePageComponent.topProductsSection.scrollIntoViewIfNeeded();
-    await buyedProduct.hover();
-    await purchaseComponent.clickAddToCartButton(
-      purchaseComponent.topProductsAddToCartButtons[0]
-    );
-    await homePageComponent.viewCartButton.click();
+    for (let i = 0; i < 3; i++) {
+      await buyedProducts[i].hover();
+      await purchaseComponent.clickAddToCartButton(
+        purchaseComponent.topProductsAddToCartButtons[i]
+      );
+    }
+    await homePageComponent.viewCartButton.first().click();
   });
 
-  test("remove_item_from_cart", async ({ page }) => {
+  test.afterEach("Status check", async ({ page }, testInfo) => {
+    console.log(
+      `Finished ${testInfo.title} test with status ${testInfo.status}`
+    );
+
+    if (testInfo.status !== testInfo.expectedStatus)
+      console.log(`Failed ${testInfo.title} test`);
+  });
+
+  test("remove_all_items_from_cart", async ({ page }) => {
     //Arrange
     const removeFromCartButton = cartComponent.removeFromCartButton;
 
     //Act
-    if (removeFromCartButton) {
-      await removeFromCartButton.click();
+    for (let i = 0; i < 3; i++) {
+      if (removeFromCartButton) {
+        await removeFromCartButton.first().click();
+        await page.waitForTimeout(500);
+      }
     }
-
     //Assert
-    await expect(cartComponent.emptyCartContent).toContainText(
-      cartComponent.emptyCartExpectedMessage
-    );
+    await expect
+      .soft(cartComponent.emptyCartContent)
+      .toContainText(cartComponent.emptyCartExpectedMessage);
   });
 });
