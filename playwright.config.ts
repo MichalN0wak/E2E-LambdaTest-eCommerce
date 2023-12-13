@@ -86,7 +86,7 @@ const config: PlaywrightTestConfig = {
     video: "on",
     trace: "retain-on-failure",
   },
-  // retries: 1,
+  retries: 1,
   reporter: [
     ["dot"],
     [
@@ -104,9 +104,15 @@ const config: PlaywrightTestConfig = {
   ],
   /* Configure projects for major browsers */
   projects: [
+    { name: "setup", testMatch: /.*\.setup\.ts/ },
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        // Use prepared auth state.
+        storageState: "./loginAuth.json",
+      },
+      dependencies: ["setup"],
     },
 
     // {

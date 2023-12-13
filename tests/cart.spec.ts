@@ -100,9 +100,10 @@ test.describe("empyting cart tests", () => {
   test("remove_all_items_from_cart", async ({ page }) => {
     //Arrange
     const removeFromCartButton = cartComponent.removeFromCartButton;
+    const numberOfRemoveButtons = await cartComponent.countRemoveButtons();
 
     //Act
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < numberOfRemoveButtons; i++) {
       if (removeFromCartButton) {
         await removeFromCartButton.first().click();
         await page.waitForTimeout(500);

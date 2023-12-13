@@ -7,8 +7,7 @@ export class LoginPage {
   passwordInput = this.page.locator("#input-password");
   executeLoginButton = this.page.getByRole("button", { name: "Login" });
   expectedUrl =
-    "https://ecommerce-playground.lambdatest.io/index.php?route=account/account";
-  // errorMessageBar = this.page.getByRole('link', { name: ' Warning: No match for E-Mail Address and/or Password.'});
+    "https://ecommerce-playground.lambdatest.io/index.php?route=common/home";
   errorMessageBar = this.page.locator(
     "#account-login > div.alert.alert-danger.alert-dismissible"
   );

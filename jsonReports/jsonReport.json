@@ -41,7 +41,20 @@
       {
         "outputDir": "C:/Proj/Testy/LambdaTest eCommerce/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Proj/Testy/LambdaTest eCommerce",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Proj/Testy/LambdaTest eCommerce/test-results",
+        "repeatEach": 1,
+        "retries": 1,
         "id": "chromium",
         "name": "chromium",
         "testDir": "C:/Proj/Testy/LambdaTest eCommerce",
@@ -59,6 +72,52 @@
     "webServer": null
   },
   "suites": [
+    {
+      "title": "tests\\auth.setup.ts",
+      "file": "tests/auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 10289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-12-13T20:36:08.359Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Proj\\Testy\\LambdaTest eCommerce\\test-results\\tests-auth.setup.ts-authenticate-setup\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5cfdf7d9fac68b9178d2-1d05d51c413078f6939a",
+          "file": "tests/auth.setup.ts",
+          "line": 9,
+          "column": 6
+        }
+      ]
+    },
     {
       "title": "tests\\addToCart.spec.ts",
       "file": "tests/addToCart.spec.ts",
@@ -85,9 +144,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 15714,
+                      "duration": 14101,
                       "errors": [],
                       "stdout": [
                         {
@@ -96,7 +155,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:48:46.769Z",
+                      "startTime": "2023-12-13T20:36:20.929Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -111,7 +170,7 @@
               ],
               "id": "5e1d57747c7268c2cd1d-b26c092f2d7b38511114",
               "file": "tests/addToCart.spec.ts",
-              "line": 34,
+              "line": 32,
               "column": 7
             },
             {
@@ -127,9 +186,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 16457,
+                      "duration": 7892,
                       "errors": [],
                       "stdout": [
                         {
@@ -138,7 +197,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:03.816Z",
+                      "startTime": "2023-12-13T20:36:36.443Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -153,7 +212,7 @@
               ],
               "id": "5e1d57747c7268c2cd1d-4622e7235d41b28cc297",
               "file": "tests/addToCart.spec.ts",
-              "line": 51,
+              "line": 49,
               "column": 7
             },
             {
@@ -169,9 +228,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 12309,
+                      "duration": 7472,
                       "errors": [],
                       "stdout": [
                         {
@@ -180,7 +239,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:20.275Z",
+                      "startTime": "2023-12-13T20:36:44.336Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -195,7 +254,7 @@
               ],
               "id": "5e1d57747c7268c2cd1d-5b41e4df588654286123",
               "file": "tests/addToCart.spec.ts",
-              "line": 68,
+              "line": 66,
               "column": 7
             }
           ]
@@ -228,14 +287,18 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 7369,
+                      "duration": 12939,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Finished open_cart test with status passed\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:48:46.742Z",
+                      "startTime": "2023-12-13T20:36:20.912Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -250,7 +313,7 @@
               ],
               "id": "e04cdee13064fc202b2f-b54326ef127fe0b08438",
               "file": "tests/cart.spec.ts",
-              "line": 19,
+              "line": 28,
               "column": 7
             },
             {
@@ -266,14 +329,18 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 9279,
+                      "duration": 10819,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Finished change_item_quantity test with status passed\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:48:55.530Z",
+                      "startTime": "2023-12-13T20:36:35.251Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -288,7 +355,7 @@
               ],
               "id": "e04cdee13064fc202b2f-69c391492eefbe8765da",
               "file": "tests/cart.spec.ts",
-              "line": 34,
+              "line": 43,
               "column": 7
             }
           ]
@@ -296,7 +363,7 @@
         {
           "title": "empyting cart tests",
           "file": "tests/cart.spec.ts",
-          "line": 56,
+          "line": 65,
           "column": 6,
           "specs": [
             {
@@ -312,18 +379,21 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 14072,
+                      "duration": 17249,
                       "errors": [],
                       "stdout": [
+                        {
+                          "text": "\u001b[33m5\u001b[39m\n"
+                        },
                         {
                           "text": "Finished remove_all_items_from_cart test with status passed\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:04.812Z",
+                      "startTime": "2023-12-13T20:36:46.073Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -338,7 +408,7 @@
               ],
               "id": "e04cdee13064fc202b2f-71400c27c5555a1bcb45",
               "file": "tests/cart.spec.ts",
-              "line": 91,
+              "line": 100,
               "column": 7
             }
           ]
@@ -373,7 +443,7 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 8273,
+                      "duration": 10534,
                       "errors": [],
                       "stdout": [
                         {
@@ -382,7 +452,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:18.928Z",
+                      "startTime": "2023-12-13T20:36:51.822Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -397,7 +467,7 @@
               ],
               "id": "6b6dc33e290e5a0a43b1-50e1c5c3695d0a47555b",
               "file": "tests/login.spec.ts",
-              "line": 25,
+              "line": 27,
               "column": 7
             },
             {
@@ -415,7 +485,7 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 6517,
+                      "duration": 7516,
                       "errors": [],
                       "stdout": [
                         {
@@ -424,7 +494,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:27.203Z",
+                      "startTime": "2023-12-13T20:37:02.359Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -439,7 +509,7 @@
               ],
               "id": "6b6dc33e290e5a0a43b1-1eab824ef0235c1301ad",
               "file": "tests/login.spec.ts",
-              "line": 36,
+              "line": 40,
               "column": 7
             },
             {
@@ -457,7 +527,7 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 8537,
+                      "duration": 9409,
                       "errors": [],
                       "stdout": [
                         {
@@ -466,7 +536,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-12-06T05:49:33.722Z",
+                      "startTime": "2023-12-13T20:37:09.877Z",
                       "attachments": [
                         {
                           "name": "video",
@@ -481,7 +551,7 @@
               ],
               "id": "6b6dc33e290e5a0a43b1-086f464bec9ca23ef2f1",
               "file": "tests/login.spec.ts",
-              "line": 49,
+              "line": 53,
               "column": 7
             }
           ]
@@ -491,7 +561,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-12-06T05:48:45.882Z",
-    "duration": 56529.53
+    "startTime": "2023-12-13T20:36:07.577Z",
+    "duration": 72550.868
   }
 }

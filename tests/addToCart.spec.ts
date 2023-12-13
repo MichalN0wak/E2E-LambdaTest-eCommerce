@@ -18,10 +18,6 @@ test.describe("Product search and add to cart tests", () => {
     purchaseComponent = new PurchaseComponent(page, homePageComponent);
 
     await page.goto("/");
-    await navBar.myAccountButton.hover();
-    await navBar.loginButton.click();
-    await loginPage.login(loginData.userEmail, loginData.userPassword);
-    await homePageComponent.homeLogo.click();
   });
 
   test.afterEach("Status check", async ({ page }, testInfo) => {

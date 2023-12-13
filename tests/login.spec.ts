@@ -7,6 +7,8 @@ test.describe("Login tests", () => {
   let navBar: NavBarComponent;
   let loginPage: LoginPage;
 
+  test.use({ storageState: { cookies: [], origins: [] } });
+
   test.beforeEach(async ({ page }) => {
     const navBar = new NavBarComponent(page);
 
@@ -15,9 +17,11 @@ test.describe("Login tests", () => {
     await page.getByRole("link", { name: "Login" }).click();
   });
 
-  test.afterEach('Status check', async ({ page }, testInfo) => {
-    console.log(`Finished ${testInfo.title} test with status ${testInfo.status}`);
-  
+  test.afterEach("Status check", async ({ page }, testInfo) => {
+    console.log(
+      `Finished ${testInfo.title} test with status ${testInfo.status}`
+    );
+
     if (testInfo.status !== testInfo.expectedStatus)
       console.log(`Failed ${testInfo.title} test`);
   });
@@ -25,12 +29,14 @@ test.describe("Login tests", () => {
   test("login_when_credentials_are_correct", async ({ page }) => {
     // Arrange
     const loginPage = new LoginPage(page);
+    const expectedUrl =
+      "https://ecommerce-playground.lambdatest.io/index.php?route=account/account";
 
     // Act
     await loginPage.login(loginData.userEmail, loginData.userPassword);
 
     // Assert
-    await expect(page).toHaveURL(loginPage.expectedUrl);
+    await expect(page).toHaveURL(expectedUrl);
   });
 
   test("display_message_when_password_is_wrong", async ({ page }) => {
